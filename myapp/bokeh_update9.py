@@ -125,7 +125,7 @@ data_test2 = {'names2':B_index,
     
 source_summary = ColumnDataSource(data_test) #Create the summary graph
 source_summary2 = ColumnDataSource(data_test2) #Create the summary graph
-print(source_summary.data)
+#print(source_summary.data)
 
 f2 = figure(x_range=source_summary.data["names"])
 f2.vbar(x=dodge("names", -.05, range=f2.x_range) , top="values", width=.5, color="orangered", fill_alpha=.5,  source=source_summary)
@@ -265,7 +265,7 @@ def update_graph(attrname, old, new):
     #source.data = {key: [value for i, value in enumerate(source.data[key])
     #if source.data["COL1"][i]>=int(myslider.value)] for key in source.data}
     #burada kaldık :)
-    print(myslider.value)
+    #print(myslider.value)
 
 n=0
 def show_less_than_0(arg):
@@ -366,11 +366,11 @@ def G_column_test(arg):
     #global n, f, test_graph
     #test_graph = f.circle(x= "myindex", y="G", size = 10, color="lime", fill_alpha=0.5, source=source_display)
     #f.add_layout(test_graph)
-    print(source_display.data["B"])
+    #print(source_display.data["B"])
     source_display.data["PLOT2"] = source_display.data["G"]
     guide1.visible = True
     
-    print(source_display.data["B"])
+    #print(source_display.data["B"])
     #source_display.data = {key: [val for i,val in enumerate(source.data[key])
     #if (source.data["PR1_PERC"][i]>=0) ] for key in source.data} #Most important part of the function and the code.
     #f.x_range.factors = source_display.data["myindex"]
